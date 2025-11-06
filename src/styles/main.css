@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base cozy styles */
+:root{
+  --rosa-100: #FADADD;
+  --rosa-200: #F6BFC8;
+  --rosa-300: #C66A7A;
+  --beige: #F9F6F7;
+}
+body {
+  @apply bg-beige text-gray-800;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+.header-title { font-family: 'Poppins', sans-serif; font-weight:600;}
+.card { @apply rounded-xl shadow-sm bg-white p-4; }
+.btn-primary { @apply bg-rosa-200 text-white px-4 py-2 rounded-xl shadow hover:scale-105 transition transform; }

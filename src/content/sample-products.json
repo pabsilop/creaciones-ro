@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Coj\u00edn personalizado",
+    "descripcion": "Coj\u00edn con nombre bordado.",
+    "imagen": "/uploads/sample1.jpg",
+    "categoria": "Regalos"
+  },
+  {
+    "nombre": "Babero bordado",
+    "descripcion": "Babero suave con nombre.",
+    "imagen": "/uploads/sample2.jpg",
+    "categoria": "Beb\u00e9"
+  },
+  {
+    "nombre": "Bolsa vichy",
+    "descripcion": "Bolsa personalizada con inicial.",
+    "imagen": "/uploads/sample3.jpg",
+    "categoria": "Accesorios"
+  },
+  {
+    "nombre": "Corona de cumplea\u00f1os",
+    "descripcion": "Corona bordada para cumplea\u00f1os.",
+    "imagen": "/uploads/sample4.jpg",
+    "categoria": "Regalos"
+  },
+  {
+    "nombre": "Monedero",
+    "descripcion": "Monedero con inicial.",
+    "imagen": "/uploads/sample5.jpg",
+    "categoria": "Accesorios"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "creaciones-sro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.0",
+    "naive-ui": "^2.36.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "vite": "^5.2.0",
+    "tailwindcss": "^3.4.14",
+    "postcss": "^8.4.27",
+    "autoprefixer": "^10.4.14",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@types/node": "^20.5.1"
+  }
+}
