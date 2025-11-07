@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar contraseña - Creaciones SRO</title>
+  </head>
+  <body>
+    <h2 style="text-align:center;">Recuperar contraseña</h2>
+    <p style="text-align:center;">Cargando formulario de recuperación...</p>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.hash.substring(1));
+      const token = urlParams.get("recovery_token");
+
+      if (token) {
+        netlifyIdentity
+          .recover(token, true)
+          .then(() => {
+            document.body.innerHTML =
+              "<p style='text-align:center;'>Contraseña restablecida correctamente. Redirigiendo al panel...</p>";
+            setTimeout(() => (window.location.href = "/admin/"), 2000);
+          })
+          .catch(() => {
+            document.body.innerHTML =
+              "<p style='color:red; text-align:center;'>Hubo un error al restablecer la contraseña. Intenta de nuevo.</p>";
+          });
+      } else {
+        document.body.innerHTML =
+          "<p style='color:red; text-align:center;'>No se encontró ningún token de recuperación.</p>";
+      }
+    </script>
+  </body>
+</html>
