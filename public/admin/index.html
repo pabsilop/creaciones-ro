@@ -2,14 +2,20 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Admin | Creaciones RO</title>
+    <title>Admin | Creaciones SRO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <!-- contenedor del CMS -->
+    <!-- Carga Netlify CMS desde la CDN oficial -->
     <script src="https://unpkg.com/netlify-cms-app@latest/dist/netlify-cms.js"></script>
+
+    <!-- Inicializa el CMS -->
     <script>
-      NetlifyCmsApp.init();
+      if (typeof CMS !== 'undefined') {
+        CMS.init();
+      } else {
+        console.error('Netlify CMS no se ha cargado correctamente.');
+      }
     </script>
   </body>
 </html>
