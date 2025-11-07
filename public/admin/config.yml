@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
   identity_url: "https://creaciones-ro.netlify.app/.netlify/identity"
-  gateway_url: "https://creaciones-ro.netlify.app/.netlify/git"
+  gateway_url: "https://api.netlify.com"
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
