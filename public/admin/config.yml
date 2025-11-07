@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
@@ -8,44 +9,38 @@ site_url: "https://creaciones-ro.netlify.app"
 display_url: "https://creaciones-ro.netlify.app"
 
 collections:
-  - name: "productos"
-    label: "Productos"
-    folder: "src/content/productos"
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - file: "src/content/home.json"
+        label: "Inicio"
+        name: "home"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Imagen principal", name: "image", widget: "image" }
+
+      - file: "src/content/about.json"
+        label: "Sobre mí"
+        name: "about"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+
+  - name: "catalog"
+    label: "Catálogo"
+    folder: "src/content/catalog"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Descripción", name: "descripcion", widget: "text" }
-      - { label: "Categoría", name: "categoria", widget: "select", options: ["Bebé", "Regalos", "Accesorios", "Otros"] }
-      - { label: "Imagen", name: "imagen", widget: "image" }
-  - name: "inicio"
-    label: "Inicio"
-    files:
-      - file: "src/content/inicio.md"
-        label: "Contenido de inicio"
-        name: "inicio"
-        fields:
-          - { label: "Título principal", name: "titulo", widget: "string" }
-          - { label: "Texto de bienvenida", name: "texto", widget: "text" }
-          - { label: "Imagen de banner", name: "banner", widget: "image" }
-  - name: "sobreMi"
-    label: "Sobre mí"
-    files:
-      - file: "src/content/sobre-mi.md"
-        label: "Información"
-        name: "sobreMi"
-        fields:
-          - { label: "Título", name: "titulo", widget: "string" }
-          - { label: "Descripción", name: "descripcion", widget: "markdown" }
-          - { label: "Imagen principal", name: "imagen", widget: "image" }
-  - name: "contacto"
+      - { label: "Nombre del producto", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Imagen", name: "image", widget: "image" }
+
+  - name: "contact"
     label: "Contacto"
-    files:
-      - file: "src/content/contacto.json"
-        label: "Datos de contacto"
-        name: "contacto"
-        fields:
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
-          - { label: "Instagram", name: "instagram", widget: "string" }
-          - { label: "Texto inferior (footer)", name: "footer_texto", widget: "string" }
+    file: "src/content/contact.json"
+    fields:
+      - { label: "Correo electrónico", name: "email", widget: "string" }
+      - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+      - { label: "Dirección", name: "address", widget: "string" }
