@@ -18,16 +18,26 @@
       }
     </script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
+   <!-- Netlify Identity widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        // Redirige automáticamente al panel cuando inicia sesión o restablece contraseña
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+        window.netlifyIdentity.on("signup", () => {
+          document.location.href = "/admin/";
+        });
+        window.netlifyIdentity.on("passwordRecovery", () => {
+          document.location.href = "/admin/";
         });
       }
-    </script>
+    });
+  }
+</script>
+
   </body>
 </html>
