@@ -39,8 +39,11 @@ collections:
 
   - name: "contact"
     label: "Contacto"
-    file: "src/content/contact.json"
-    fields:
-      - { label: "Correo electrónico", name: "email", widget: "string" }
-      - { label: "WhatsApp", name: "whatsapp", widget: "string" }
-      - { label: "Dirección", name: "address", widget: "string" }
+    files:
+      - file: "src/content/contact.json"
+        label: "Datos de contacto"
+        name: "contact"
+        fields:
+          - { label: "Correo electrónico", name: "email", widget: "string" }
+          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+          - { label: "Dirección", name: "address", widget: "string" }
