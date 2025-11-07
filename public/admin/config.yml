@@ -3,6 +3,10 @@ backend:
   branch: main
 media_folder: "public/uploads"
 public_folder: "/uploads"
+
+site_url: "https://creaciones-ro.netlify.app"
+display_url: "https://creaciones-ro.netlify.app"
+
 collections:
   - name: "productos"
     label: "Productos"
