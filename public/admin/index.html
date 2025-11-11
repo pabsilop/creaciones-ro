@@ -6,19 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <!-- ✅ Versión estable del Netlify CMS (autocontenida) -->
-    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
+    <!-- ✅ Carga Decap CMS (continuación oficial de Netlify CMS) -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
     <script>
-      if (typeof CMS !== 'undefined') {
-        CMS.init();
-        console.log("✅ Netlify CMS cargado correctamente");
+      if (typeof DecapCMSApp !== "undefined") {
+        DecapCMSApp.init();
+        console.log("✅ Decap CMS cargado correctamente");
       } else {
-        console.error("❌ Netlify CMS no se ha cargado correctamente.");
+        console.error("❌ No se pudo cargar Decap CMS.");
       }
-    </script>
-    <script src="https://unpkg.com/netlify-cms-app@latest/dist/netlify-cms.js"></script>
-    <script>
-      NetlifyCmsApp.init();
     </script>
   </body>
 </html>
