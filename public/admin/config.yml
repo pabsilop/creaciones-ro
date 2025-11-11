@@ -1,8 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: pabsilop/creaciones-ro
   branch: main
-  identity_url: "https://creaciones-ro.netlify.app/.netlify/identity"
-  gateway_url: "https://api.netlify.com"
+  base_url: https://api.netlify.com
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
