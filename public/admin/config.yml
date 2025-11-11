@@ -2,10 +2,9 @@ backend:
   name: github
   repo: pabsilop/creaciones-ro
   branch: main
-  auth_scope: repo
-  open_authoring: false
-  client_id: Ov23liYr48UderesgxxI
-  
+  base_url: https://decap-oauth.vercel.app
+  auth_endpoint: auth
+
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
